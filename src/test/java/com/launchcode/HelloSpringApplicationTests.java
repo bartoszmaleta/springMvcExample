@@ -1,4 +1,4 @@
-package com.launchcode.hellospring;
+package com.launchcode;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

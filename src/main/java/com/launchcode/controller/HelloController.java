@@ -22,9 +22,14 @@ public class HelloController {
     @RequestMapping(value = "/helloWithName", method = RequestMethod.GET)
     @ResponseBody
     public String helloWithName(HttpServletRequest httpServletRequest) {
-        // get name parameter from request
+        // get name parameter from request;
+        // will be null if no parameter passed in
         String name = httpServletRequest.getParameter("name");
 
+        // if null, then "world"
+        if (name == null) {
+            name = "World!";
+        }
 
         return String.format("<h1>%s</h1>", HelloMessage.getMessage(name));
     }
